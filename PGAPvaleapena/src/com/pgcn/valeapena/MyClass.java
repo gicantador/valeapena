@@ -1,4 +1,4 @@
-package com.pgcn.pgapcontaconta;
+package com.pgcn.valeapena;
 
 import org.apache.cordova.DroidGap;
 import org.apache.cordova.api.LOG;
@@ -6,7 +6,6 @@ import org.apache.cordova.api.LOG;
 import android.content.Context;
 import android.telephony.TelephonyManager;
 import android.webkit.WebView;
-import com.pgcn.valeapena.R;
 
 public class MyClass {
 	private WebView mAppView;

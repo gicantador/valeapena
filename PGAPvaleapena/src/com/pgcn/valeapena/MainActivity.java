@@ -1,4 +1,4 @@
-package com.pgcn.pgapcontaconta;
+package com.pgcn.valeapena;
 
 import org.apache.cordova.DroidGap;
 
