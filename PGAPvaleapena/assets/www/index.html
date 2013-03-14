@@ -1,33 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>ContaConta</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Vale à pena comprar a prazo?</title>
 
+<script type="text/javascript" charset="utf-8"
+	src="js/jquery.mobile-1.2.0.min.js"></script> 
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"/>
+	
 <script type="text/javascript" charset="utf-8" src="cordova-2.5.0.js"></script>
-<script type="text/javascript" charset="utf-8">
-	// Wait for Cordova to load
-	document.addEventListener("deviceready", onDeviceReady, false);
 
-	// Cordova is ready
-	//
-	function onDeviceReady() {
-		alert("To pronto!");
-		alert("Meu nro: " + window.MyCls.getTelephoneNumber())
-	}
-</script>
 </head>
 <body>
 
 	<div></div>
 	<br />
-	<script type="text/javascript" charset="utf-8">
-		$(function() {
-			$("#phone").text(
-					"My telephone number is: "
-							+ window.MyCls.getTelephoneNumber());
-		});
-	</script>
-	<div id="#phone"></div>
+	
+	
 
 
 
@@ -36,33 +26,42 @@
 		<form action="configure.html">
 			<div>
 				<label>Valor &agrave; vista</label> <input type="text" name="vista" />
+				<input type="button" id="hintvista" value="?" />
+				<div id="hintvistamsg" hidden="true" style="display: none;">Valor total do produto, se comprado &aacute; vista</div>
 			</div>
 
 			<div>
-				<label>Valor parcela</label> <input type="text" name="parcela" />
+				<label>Valor parcela</label> <input type="text" name="parcela" /><input
+					type="button" id="hintparc" value="?" />
 			</div>
 
 			<div>
 				<label>Quantidade parcelas</label> <input type="number" name="qtd"
-					size="3" />
+					size="3" /><input type="button" id="hintqtd" value="?" />
 			</div>
-			
+
 			<div>
-                <label>Rendimento da poupan&ccedil;a</label> <input type="text" name="poupanca" value="1,3"
-                    size="3" />
-            </div>
+				<label>Rendimento da poupan&ccedil;a</label> <input type="text"
+					name="poupanca" value="1,3" size="3" /><input type="button"
+					id="hintpoup" value="?" />
+			</div>
 
 			<input type="submit" value="Vale &agrave; pena?" />
 		</form>
 	</fieldset>
-	
-	
 
-	<div>
-	
-	
-	
-	</div>
 
+
+	<div></div>
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.mobile-1.2.0.min.js"></script>
+	<script>
+		var hiddenBox = $('#hintvistamsg');
+		$('hintpoup').on("click", function(event) {
+			hiddenBox.show();
+		});
+
+		
+	</script>
 </body>
 </html>
